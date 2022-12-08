@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="e_shop_diagram.erd">
+	<entities>
+		<data-source id="mysql8-1830ed4a0c4-147f7f22d1a1cf67">
+			<entity id="1" name="categories" fq-name="e_shop.categories" order="0" color-bg="204,192,184" x="1161" y="505">
+				<path name="e_shop"/>
+			</entity>
+			<entity id="2" name="clients" fq-name="e_shop.clients" order="1" color-bg="204,192,184" x="982" y="164">
+				<path name="e_shop"/>
+			</entity>
+			<entity id="3" name="discounts" fq-name="e_shop.discounts" order="2" color-bg="204,192,184" x="1287" y="678">
+				<path name="e_shop"/>
+			</entity>
+			<entity id="4" name="images" fq-name="e_shop.images" order="3" color-bg="204,192,184" x="1326" y="363">
+				<path name="e_shop"/>
+			</entity>
+			<entity id="5" name="manufacturers" fq-name="e_shop.manufacturers" order="4" color-bg="204,192,184" x="1461" y="660">
+				<path name="e_shop"/>
+			</entity>
+			<entity id="6" name="orders" fq-name="e_shop.orders" order="5" color-bg="204,192,184" x="1466" y="368">
+				<path name="e_shop"/>
+			</entity>
+			<entity id="7" name="pickup_points" fq-name="e_shop.pickup_points" order="6" color-bg="204,192,184" x="1664" y="126">
+				<path name="e_shop"/>
+			</entity>
+			<entity id="8" name="products" fq-name="e_shop.products" order="7" color-bg="204,192,184" x="1716" y="619">
+				<path name="e_shop"/>
+			</entity>
+			<entity id="9" name="reviews" fq-name="e_shop.reviews" order="8" color-bg="204,192,184" x="2001" y="509">
+				<path name="e_shop"/>
+			</entity>
+			<entity id="10" name="staff" fq-name="e_shop.staff" order="9" color-bg="204,192,184" x="1870" y="118">
+				<path name="e_shop"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="products_ibfk_1" fq-name="e_shop.products.products_ibfk_1" type="fk" pk-ref="1" fk-ref="8"/>
+		<relation name="orders_ibfk_2" fq-name="e_shop.orders.orders_ibfk_2" type="fk" pk-ref="2" fk-ref="6"/>
+		<relation name="reviews_ibfk_2" fq-name="e_shop.reviews.reviews_ibfk_2" type="fk" pk-ref="2" fk-ref="9"/>
+		<relation name="manufacturers_ibfk_1" fq-name="e_shop.manufacturers.manufacturers_ibfk_1" type="fk" pk-ref="4" fk-ref="5"/>
+		<relation name="products_ibfk_3" fq-name="e_shop.products.products_ibfk_3" type="fk" pk-ref="4" fk-ref="8"/>
+		<relation name="products_ibfk_2" fq-name="e_shop.products.products_ibfk_2" type="fk" pk-ref="5" fk-ref="8"/>
+		<relation name="reviews_ibfk_3" fq-name="e_shop.reviews.reviews_ibfk_3" type="fk" pk-ref="6" fk-ref="9"/>
+		<relation name="orders_ibfk_3" fq-name="e_shop.orders.orders_ibfk_3" type="fk" pk-ref="7" fk-ref="6"/>
+		<relation name="staff_ibfk_1" fq-name="e_shop.staff.staff_ibfk_1" type="fk" pk-ref="7" fk-ref="10"/>
+		<relation name="discounts_ibfk_1" fq-name="e_shop.discounts.discounts_ibfk_1" type="fk" pk-ref="8" fk-ref="3"/>
+		<relation name="orders_ibfk_1" fq-name="e_shop.orders.orders_ibfk_1" type="fk" pk-ref="8" fk-ref="6"/>
+		<relation name="reviews_ibfk_1" fq-name="e_shop.reviews.reviews_ibfk_1" type="fk" pk-ref="8" fk-ref="9"/>
+	</relations>
+</diagram>
